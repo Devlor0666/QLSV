@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="./src/public/style.css">
+</head>
+<body>
+    <div class="title"><h1>DANH SÁCH SINH VIÊN</h1></div>
+    <div id="box-search">
+        <h3>Lọc</h3>
+        <label for="input">Tìm kiếm</label>
+        <input type="text" class="margin" id="input" placeholder="Nhập tên sinh viên">
+        <br>
+        <select class="margin" id="filter-with-class">
+            <option value="all">Danh sách theo lớp</option>
+        </select>
+        <br>
+        <select class="margin" id="sort">
+            <option value="default">Danh sách mặc định</option>
+            <option value="asc">Sắp xếp tăng đần theo gpa</option>
+            <option value="desc">Sắp xếp giảm dần theo gpa</option>
+        </select>
+        <br>
+        <select class="margin" id="filter-with-major">
+            <option value="all">Danh sách theo ngành</option>
+        </select>
+        <br>
+        <div class="reset-btnadd">
+            <button id="reset">Làm mới</button>
+            <button id="btn-add">Thêm sinh viên</button>
+        </div>
+    </div>
+    <div id="student-form">
+        <h3>---Thêm sinh viên---</h3>
+        <form id="info">
+            <input type="text" class="input-add" id="input-name" placeholder="Tên sinh viên" required pattern="[A-Za-z]{1-100}">
+            <input type="text" class="input-add" id="input-age" placeholder="Tuổi" pattern="[0-200]{1-3}">
+            <select class="input-add" id="input-gender">
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+            </select>
+            <select class="input-add" id="input-class">
+            </select>
+            <select id="input-major" class="input-add">
+            </select>
+
+            <input type="text" class="input-add" id="input-email" placeholder="Email">
+            <input type="text" class="input-add" id="input-phone" placeholder="Số điện thoại" required pattern="[0-9]{10}">
+            <input type="text" class="input-add" id="input-address" placeholder="Địa chỉ">
+            <input type="text" class="input-add" id="input-gpa" placeholder="Gpa">
+            <input type="text" class="input-add" id="input-credits" placeholder="Số tín chỉ">
+            <select class="input-add" id="input-status">
+                <option value="Đang học">Đang học</option>
+                <option value="Bảo lưu">Bảo lưu</option>
+                <option value="Cảnh báo">Cảnh cáo</option>
+            </select>
+
+            <div class="control">
+                <button type="submit" id="btn-save">Thêm</button>
+                <button type="button" id="btn-cancel">Hủy</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="overlay" id="overlay">
+        <div id="confirm-box">
+            <h4>Cảnh báo</h4>
+            <p>Bạn có chắc muốn xóa</p>
+            <div class="warning">
+                <button id="confirm">Xác nhận</button>
+                <button id="cancel">Hủy</button>
+            </div>
+        </div>
+    </div>
+    <span id="state"></span>
+    <div class="container">
+        <table id="table">
+            
+        </table>
+    </div>
+    <div id="turn-page">
+        <button class="btn-turn" id="previous"></button>
+        <span id="page"></span>
+        <button class="btn-turn" id="next"></button>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    background-color: rgb(101, 101, 101);
+}
+h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    position: absolute;
+    width: 80%;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding-right: 0;
+
+}
+td, th{
+    border: 1px solid;
+    height: 40px;
+}
+tr:nth-child(odd){
+    background-color:rgb(170, 170, 170);
+}
+tr:nth-child(even):hover{
+    background-color:rgb(170, 170, 170);
+}
+.middle{
+    text-align: center;
+}
+#student-form{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 400px;
+    height: 550px;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 10;
+}
+#student-form>h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#student-form.active{
+    display: block;
+}
+.input-add{
+    display: flex;
+    width: 280px;
+    height: 30px;
+    border-radius: 5px;
+}
+#info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.control{
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#btn-save, #btn-cancel{
+    width: 50px;
+}
+#confirm-box{
+    position: fixed;
+    display: none;
+    border-radius: 5px;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 130px;
+    width: 250px;
+}
+
+#confirm-box.active{
+    display: block;
+}
+#confirm-box>h4{
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#confirm-box>p{
+    text-align: center;
+}
+#confirm, #cancel{
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+}
+#confirm:hover{
+    background-color: green;
+    color: aliceblue;
+    transition: 0.3s;
+}
+#cancel:hover{
+    background-color: red;
+    color: aliceblue;
+    transition: 0.3s;
+}
+.warning{
+    gap: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+.overlay.active{
+    display: block;
+    inset: 0;
+}
+
+#box-search{
+    margin-top: 20px;
+    position: fixed;
+    right: 10px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+#box-search>h3{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.margin{
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 5px;
+}
+.reset-btnadd{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#reset, #btn-add{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+#reset:hover, #btn-add:hover{
+    background-color: aqua;
+    scale: 1.05;
+    transition: 0.3s;
+}
+.btn-del, .btn-edit{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+.btn-del{
+    background-color: rgb(146, 146, 146);
+    color: white;
+}
+.btn-del:hover{
+    background-color: rgb(254, 115, 115);
+    color: red;
+}
+
+.btn-edit{
+    background-color: white;
+}
+.btn-edit:hover{
+    background-color: rgb(37, 255, 37);
+    color: white;
+}
+@media (max-width: 1300px) {
+    #box-search{
+        position: sticky;
+        z-index: 11;
+        width: 400px;
+    }
+}
+
+#turn-page{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn-turn{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
+#next{
+    right: 0;
+}
+#previous{
+    left: 0;
+}
+#page{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
