@@ -142,7 +142,9 @@ cancel.addEventListener('click', () => {
 conFirm.addEventListener('click', () => {
     deleteStudent(students, studentIdDelete);
     pageStudents = getPageStudents();
-    if(pageStudents.length === 0 || pageStudentsFilter.length === 0){
+    pageStudentsFilter = handleFilter();
+    let totalStudentsOnPage = paginateStudents(pageStudentsFilter, currPage, limit);
+    if(pageStudents.length === 0 || totalStudentsOnPage.length === 0){
         currPage--;
         page.textContent = currPage;
     }
